@@ -28,4 +28,13 @@ public class Musics extends Sounds{
     public void setGender(String gender) {
         this.gender = gender;
     }
+
+    @Override
+    public int getClassification() {
+        if (this.getTotalReproductions() > 2000) {
+            return 10;
+        } else {
+            return  7;
+        }
+    }
 }

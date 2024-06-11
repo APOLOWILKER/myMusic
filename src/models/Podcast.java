@@ -28,4 +28,13 @@ public class Podcast extends  Sounds{
     public void setEpisodeNumber(int episodeNumber) {
         this.episodeNumber = episodeNumber;
     }
+
+    @Override
+    public int getClassification() {
+        if (this.getTotaLikes() > 500) {
+            return  10;
+        } else {
+            return 8;
+        }
+    }
 }
